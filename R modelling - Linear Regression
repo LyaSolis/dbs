@@ -1,0 +1,654 @@
+library(MASS) 
+
+data(Boston)
+
+summary(lm(crim ~ zn, data = Boston))
+
+ 
+
+## 
+
+## Call:
+
+## lm(formula = crim ~ zn, data = Boston)
+
+## 
+
+## Residuals:
+
+##    Min     1Q Median     3Q   
+Max 
+
+##  -4.43  -4.22 
+-2.62   1.25  84.52 
+
+## 
+
+## Coefficients:
+
+##            
+Estimate Std. Error t value Pr(>|t|)    
+
+## (Intercept)  
+4.4537     0.4172   10.67 
+< 2e-16 ***
+
+## zn          
+-0.0739     0.0161   -4.59 
+5.5e-06 ***
+
+## ---
+
+## Signif. codes:  0
+'***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+## 
+
+## Residual standard error: 8.44 on 504 degrees of freedom
+
+## Multiple R-squared: 0.0402,  Adjusted R-squared: 0.0383 
+
+## F-statistic: 21.1 on 1 and 504 DF,  p-value: 5.51e-06
+
+ 
+
+summary(lm(crim ~ indus, data = Boston))
+
+ 
+
+## 
+
+## Call:
+
+## lm(formula = crim ~ indus, data = Boston)
+
+## 
+
+## Residuals:
+
+##    Min     1Q Median     3Q   
+Max 
+
+## -11.97  -2.70  -0.74  
+0.71  81.81 
+
+## 
+
+## Coefficients:
+
+##            
+Estimate Std. Error t value Pr(>|t|)    
+
+## (Intercept)  
+-2.064      0.667   -3.09  
+0.0021 ** 
+
+## indus          0.510      0.051   
+9.99   <2e-16 ***
+
+## ---
+
+## Signif. codes:  0
+'***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+## 
+
+## Residual standard error: 7.87 on 504 degrees of freedom
+
+## Multiple R-squared: 0.165,   Adjusted R-squared: 0.164 
+
+## F-statistic: 99.8 on 1 and 504 DF,  p-value: <2e-16
+
+ 
+
+summary(lm(crim ~ chas, data = Boston))             
+
+ 
+
+## 
+
+## Call:
+
+## lm(formula = crim ~ chas, data = Boston)
+
+## 
+
+## Residuals:
+
+##    Min     1Q Median     3Q   
+Max 
+
+##  -3.74  -3.66 
+-3.44   0.02  85.23 
+
+## 
+
+## Coefficients:
+
+##            
+Estimate Std. Error t value Pr(>|t|)    
+
+## (Intercept)   
+3.744      0.396    9.45  
+<2e-16 ***
+
+## chas         
+-1.893      1.506   -1.26    
+0.21    
+
+## ---
+
+## Signif. codes:  0
+'***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+## 
+
+## Residual standard error: 8.6 on 504 degrees of freedom
+
+## Multiple R-squared: 0.00312, Adjusted R-squared: 0.00115 
+
+## F-statistic: 1.58 on 1 and 504 DF,  p-value: 0.209
+
+ 
+
+summary(lm(crim ~ nox, data = Boston))
+
+ 
+
+## 
+
+## Call:
+
+## lm(formula = crim ~ nox, data = Boston)
+
+## 
+
+## Residuals:
+
+##    Min     1Q Median     3Q   
+Max 
+
+## -12.37  -2.74  -0.97  
+0.56  81.73 
+
+## 
+
+## Coefficients:
+
+##            
+Estimate Std. Error t value Pr(>|t|)    
+
+## (Intercept)   
+-13.7        1.7   -8.07 
+5.1e-15 ***
+
+## nox            
+31.2        3.0   10.42 
+< 2e-16 ***
+
+## ---
+
+## Signif. codes:  0
+'***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+## 
+
+## Residual standard error: 7.81 on 504 degrees of freedom
+
+## Multiple R-squared: 0.177,   Adjusted R-squared: 0.176 
+
+## F-statistic:  109
+on 1 and 504 DF,  p-value: <2e-16
+
+ 
+
+summary(lm(crim ~ rm, data = Boston))
+
+ 
+
+## 
+
+## Call:
+
+## lm(formula = crim ~ rm, data = Boston)
+
+## 
+
+## Residuals:
+
+##    Min     1Q Median     3Q   
+Max 
+
+##  -6.60  -3.95 
+-2.65   0.99  87.20 
+
+## 
+
+## Coefficients:
+
+##            
+Estimate Std. Error t value Pr(>|t|)    
+
+## (Intercept)  
+20.482      3.364    6.09 
+2.3e-09 ***
+
+## rm           
+-2.684      0.532   -5.04 
+6.3e-07 ***
+
+## ---
+
+## Signif. codes:  0
+'***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+## 
+
+## Residual standard error: 8.4 on 504 degrees of freedom
+
+## Multiple R-squared: 0.0481,  Adjusted R-squared: 0.0462 
+
+## F-statistic: 25.5 on 1 and 504 DF,  p-value: 6.35e-07
+
+ 
+
+summary(lm(crim ~ age, data = Boston))
+
+ 
+
+ 
+
+## 
+
+## Call:
+
+## lm(formula = crim ~ age, data = Boston)
+
+## 
+
+## Residuals:
+
+##    Min     1Q Median     3Q   
+Max 
+
+##  -6.79  -4.26 
+-1.23   1.53  82.85 
+
+## 
+
+## Coefficients:
+
+##            
+Estimate Std. Error t value Pr(>|t|)    
+
+## (Intercept) 
+-3.7779     0.9440   -4.00 
+7.2e-05 ***
+
+## age           0.1078     0.0127   
+8.46  2.9e-16 ***
+
+## ---
+
+## Signif. codes:  0
+'***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+## 
+
+## Residual standard error: 8.06 on 504 degrees of freedom
+
+## Multiple R-squared: 0.124,   Adjusted R-squared: 0.123 
+
+## F-statistic: 71.6 on 1 and 504 DF,  p-value: 2.85e-16
+
+ 
+
+summary(lm(crim ~ dis, data = Boston))
+
+ 
+
+## 
+
+## Call:
+
+## lm(formula = crim ~ dis, data = Boston)
+
+## 
+
+## Residuals:
+
+##    Min     1Q Median     3Q   
+Max 
+
+##  -6.71  -4.13 
+-1.53   1.52  81.67 
+
+## 
+
+## Coefficients:
+
+##            
+Estimate Std. Error t value Pr(>|t|)    
+
+## (Intercept)   
+9.499      0.730   13.01  
+<2e-16 ***
+
+## dis          
+-1.551      0.168   -9.21  
+<2e-16 ***
+
+## ---
+
+## Signif. codes:  0
+'***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+## 
+
+## Residual standard error: 7.97 on 504 degrees of freedom
+
+## Multiple R-squared: 0.144,   Adjusted R-squared: 0.142 
+
+## F-statistic: 84.9 on 1 and 504 DF,  p-value: <2e-16
+
+ 
+
+summary(lm(crim ~ rad, data = Boston))
+
+ 
+
+## 
+
+## Call:
+
+## lm(formula = crim ~ rad, data = Boston)
+
+## 
+
+## Residuals:
+
+##    Min     1Q Median     3Q   
+Max 
+
+## -10.16  -1.38  -0.14  
+0.66  76.43 
+
+## 
+
+## Coefficients:
+
+##            
+Estimate Std. Error t value Pr(>|t|)    
+
+## (Intercept) 
+-2.2872     0.4435   -5.16 
+3.6e-07 ***
+
+## rad          
+0.6179     0.0343   18.00 
+< 2e-16 ***
+
+## ---
+
+## Signif. codes:  0
+'***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+## 
+
+## Residual standard error: 6.72 on 504 degrees of freedom
+
+## Multiple R-squared: 0.391,   Adjusted R-squared: 0.39 
+
+## F-statistic:  324
+on 1 and 504 DF,  p-value: <2e-16
+
+ 
+
+summary(lm(crim ~ tax, data = Boston))
+
+ 
+
+## 
+
+## Call:
+
+## lm(formula = crim ~ tax, data = Boston)
+
+## 
+
+## Residuals:
+
+##    Min     1Q Median     3Q   
+Max 
+
+## -12.51  -2.74  -0.19  
+1.07  77.70 
+
+## 
+
+## Coefficients:
+
+##            
+Estimate Std. Error t value Pr(>|t|)    
+
+## (Intercept) -8.52837   
+0.81581   -10.4   <2e-16 ***
+
+## tax         
+0.02974    0.00185    16.1  
+<2e-16 ***
+
+## ---
+
+## Signif. codes:  0
+'***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+## 
+
+## Residual standard error: 7 on 504 degrees of freedom
+
+## Multiple R-squared: 0.34,    Adjusted R-squared: 0.338 
+
+## F-statistic:  259
+on 1 and 504 DF,  p-value: <2e-16
+
+ 
+
+summary(lm(crim ~ ptratio, data = Boston))
+
+ 
+
+## 
+
+## Call:
+
+## lm(formula = crim ~ ptratio, data = Boston)
+
+## 
+
+## Residuals:
+
+##    Min     1Q Median     3Q   
+Max 
+
+##  -7.65  -3.99 
+-1.91   1.82  83.35 
+
+## 
+
+## Coefficients:
+
+##            
+Estimate Std. Error t value Pr(>|t|)    
+
+## (Intercept) 
+-17.647      3.147   -5.61 
+3.4e-08 ***
+
+## ptratio       
+1.152      0.169    6.80 
+2.9e-11 ***
+
+## ---
+
+## Signif. codes:  0
+'***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+## 
+
+## Residual standard error: 8.24 on 504 degrees of freedom
+
+## Multiple R-squared: 0.0841,  Adjusted R-squared: 0.0823 
+
+## F-statistic: 46.3 on 1 and 504 DF,  p-value: 2.94e-11
+
+ 
+
+summary(lm(crim ~ black, data = Boston))
+
+ 
+
+## 
+
+## Call:
+
+## lm(formula = crim ~ black, data = Boston)
+
+## 
+
+## Residuals:
+
+##    Min     1Q Median     3Q   
+Max 
+
+## -13.76  -2.30  -2.09 
+-1.30  86.82 
+
+## 
+
+## Coefficients:
+
+##            
+Estimate Std. Error t value Pr(>|t|)    
+
+## (Intercept) 16.55353   
+1.42590   11.61   <2e-16 ***
+
+## black      
+-0.03628    0.00387   -9.37  
+<2e-16 ***
+
+## ---
+
+## Signif. codes:  0
+'***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+## 
+
+## Residual standard error: 7.95 on 504 degrees of freedom
+
+## Multiple R-squared: 0.148,   Adjusted R-squared: 0.147 
+
+## F-statistic: 87.7 on 1 and 504 DF,  p-value: <2e-16
+
+ 
+
+summary(lm(crim ~ lstat, data = Boston))
+
+ 
+
+## 
+
+## Call:
+
+## lm(formula = crim ~ lstat, data = Boston)
+
+## 
+
+## Residuals:
+
+##    Min     1Q Median     3Q   
+Max 
+
+## -13.93  -2.82  -0.66  
+1.08  82.86 
+
+## 
+
+## Coefficients:
+
+##            
+Estimate Std. Error t value Pr(>|t|)    
+
+## (Intercept) 
+-3.3305     0.6938    -4.8 
+2.1e-06 ***
+
+## lstat        
+0.5488     0.0478    11.5 
+< 2e-16 ***
+
+## ---
+
+## Signif. codes:  0
+'***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+## 
+
+## Residual standard error: 7.66 on 504 degrees of freedom
+
+## Multiple R-squared: 0.208,   Adjusted R-squared: 0.206 
+
+## F-statistic:  132
+on 1 and 504 DF,  p-value: <2e-16
+
+ 
+
+summary(lm(crim ~ medv, data = Boston))
+
+ 
+
+## 
+
+## Call:
+
+## lm(formula = crim ~ medv, data = Boston)
+
+## 
+
+## Residuals:
+
+##    Min     1Q Median     3Q   
+Max 
+
+##  -9.07  -4.02 
+-2.34   1.30  80.96 
+
+## 
+
+## Coefficients:
+
+##            
+Estimate Std. Error t value Pr(>|t|)    
+
+## (Intercept) 
+11.7965     0.9342   12.63  
+<2e-16 ***
+
+## medv        
+-0.3632     0.0384   -9.46  
+<2e-16 ***
+
+## ---
+
+## Signif. codes:  0
+'***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
+
+## 
+
+## Residual standard error: 7.93 on 504 degrees of freedom
+
+## Multiple R-squared: 0.151,   Adjusted R-squared: 0.149 
+
+## F-statistic: 89.5 on 1 and 504 DF,  p-value: <2e-16
+
