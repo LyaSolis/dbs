@@ -47,7 +47,6 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(1, result)
         result=self.calc.substract(8,4)
         self.assertEqual(4, result)
-
         
     def test_calculator_multiply_method_connect_result(self):
         result=self.calc.multiply(2,2)
@@ -55,13 +54,11 @@ class TestCalculator(unittest.TestCase):
         result=self.calc.multiply(6,7)
         self.assertEqual(42, result)
 
-
     def test_calculator_div_method_connect_result(self):
         result=self.calc.div(49, 7)
         self.assertEqual(7, result)
         result=self.calc.div(56, 8)
         self.assertEqual(7, result)
-
 
     def test_calculator_sqroot_method_connect_result(self):
         result=self.calc.sqroot(4)
@@ -69,13 +66,11 @@ class TestCalculator(unittest.TestCase):
         result=self.calc.sqroot(9)
         self.assertEqual(3, result)
 
-
     def test_calculator_sqpower_method_connect_result(self):
         result=self.calc.sqpower(5)
         self.assertEqual(25, result)
         result=self.calc.sqpower(3)
         self.assertEqual(9, result)
-
 
     def test_calculator_cubepower_method_connect_result(self):
         result=self.calc.cubepower(3)
